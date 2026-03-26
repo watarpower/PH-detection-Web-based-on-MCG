@@ -331,34 +331,6 @@ if predict_clicked:
                 unsafe_allow_html=True,
             )
 
-        m1, m2 = st.columns(2)
-        with m1:
-            st.metric("Predicted Probability", f"{prob:.4f}")
-        with m2:
-            st.metric("Decision Threshold", f"{PH_THRESHOLD:.6f}")
-
-        st.markdown("## 🩺 Decision Support")
-        if pred == 1:
-            st.markdown(
-                """
-                <div class="advice-box">
-                    The model indicates that the patient currently has a relatively high probability of pulmonary hypertension.<br><br>
-                    <b>Suggested next step:</b> consider further confirmatory testing and integrate the result with the full clinical context.
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-        else:
-            st.markdown(
-                """
-                <div class="advice-box">
-                    The model indicates a relatively low probability of pulmonary hypertension at present.<br><br>
-                    <b>Suggested next step:</b> continue routine follow-up and interpret the result together with symptoms, imaging, and other examinations.
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-
     # -------------------------
     # Right: SHAP
     # -------------------------
@@ -382,6 +354,6 @@ if predict_clicked:
 
     st.markdown("---")
     st.markdown(
-        f'<div class="small-note">Note: Classification is based on a fixed threshold of {PH_THRESHOLD:.6f}, derived from the Youden index during model development. This tool is for research and decision-support only.</div>',
+        f'This tool is for research and decision-support only.</div>',
         unsafe_allow_html=True,
     )
