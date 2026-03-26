@@ -22,7 +22,7 @@ FEATURE_FILE = "selected_features_1SE_建模数据.txt"
 PH_THRESHOLD = 0.352361111
 
 FEATURE_LABELS = {
-    "sex": "Sex (0=female, 1=male)",
+    "sex": "Sex",
     "age": "Age (years)",
     "BMI": "BMI",
     "R_Mag_Ang": "R_Mag_Ang",
@@ -249,24 +249,30 @@ for r in range(n_rows):
 
         with row_cols[c]:
             if feat.lower() in ["sex", "gender"]:
-    sex_label = st.selectbox(label, ["Female", "Male"], index=0)
-    input_data[feat] = 0 if sex_label == "Female" else 1
-elif feat == "age":
-    input_data[feat] = st.number_input(
-        label,
-        min_value=0,
-        value=30,
-        step=1,
-        format="%d"
-    )
-else:
-    input_data[feat] = st.number_input(
-        label,
-        value=0.0,
-        format="%.2f"
-    )
+                sex_label = st.selectbox(label, ["Female", "Male"], index=0)
+                input_data[feat] = 0 if sex_label == "Female" else 1
+
+            elif feat == "age":
+                input_data[feat] = st.number_input(
+                    label,
+                    min_value=0,
+                    value=30,
+                    step=1,
+                    format="%d"
+                )
+
+            else:
+                input_data[feat] = st.number_input(
+                    label,
+                    value=0.0,
+                    format="%.2f"
+                )
 
 input_df = pd.DataFrame([input_data], columns=feature_names)
+
+if "age" in input_df.columns:
+    input_df["age"] = input_df["age"].astype(int)
+
 predict_clicked = st.button("Predict", use_container_width=True)
 
 # =========================
