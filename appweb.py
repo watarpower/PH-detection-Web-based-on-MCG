@@ -249,9 +249,22 @@ for r in range(n_rows):
 
         with row_cols[c]:
             if feat.lower() in ["sex", "gender"]:
-                input_data[feat] = st.selectbox(label, [0, 1], index=0)
-            else:
-                input_data[feat] = st.number_input(label, value=0.0, format="%.2f")
+    sex_label = st.selectbox(label, ["Female", "Male"], index=0)
+    input_data[feat] = 0 if sex_label == "Female" else 1
+elif feat == "age":
+    input_data[feat] = st.number_input(
+        label,
+        min_value=0,
+        value=30,
+        step=1,
+        format="%d"
+    )
+else:
+    input_data[feat] = st.number_input(
+        label,
+        value=0.0,
+        format="%.2f"
+    )
 
 input_df = pd.DataFrame([input_data], columns=feature_names)
 predict_clicked = st.button("Predict", use_container_width=True)
