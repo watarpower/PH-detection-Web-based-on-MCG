@@ -25,13 +25,13 @@ FEATURE_LABELS = {
     "sex": "Sex (0=female, 1=male)",
     "age": "Age (years)",
     "BMI": "BMI",
-    "R_Mag_Ang",
-    "QRS_TCV_AREA",
-    "QTc",
-    "P_P_MFD",
-    "T_Mag_Ang",
-    "R_TCV_Ang",
-    "P_Mag_Dis",
+    "R_Mag_Ang": "R_Mag_Ang",
+    "QRS_TCV_AREA": "QRS_TCV_AREA",
+    "QTc": "QTc",
+    "P_P_MFD": "P_P_MFD",
+    "T_Mag_Ang": "T_Mag_Ang",
+    "R_TCV_Ang": "R_TCV_Ang",
+    "P_Mag_Dis": "P_Mag_Dis",
 }
 
 # =========================
