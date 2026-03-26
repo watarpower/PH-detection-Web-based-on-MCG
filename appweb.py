@@ -330,19 +330,15 @@ if predict_clicked:
                 """,
                 unsafe_allow_html=True,
             )
-        m1, m2 = st.columns(2)
-        with m1:
-            st.metric("Predicted Probability", f"{prob:.4f}")
-        with m2:
-            st.metric("Decision Threshold", f"{PH_THRESHOLD:.6f}")
+
 
         st.markdown("## 🩺 Decision Support")
         if pred == 1:
             st.markdown(
                 """
                 <div class="advice-box">
-                    The model indicates that the patient currently has a relatively high probability of pulmonary hypertension.<br><br>
-                    <b>Suggested next step:</b> consider further confirmatory testing and integrate the result with the full clinical context.
+                    The MCG model indicates that the patient has a high probability of pulmonary hypertension.<br><br>
+                    <b>Suggested next step:</b> Referral to a pulmonary vascular center for further TTE or RHC examination.
                 </div>
                 """,
                 unsafe_allow_html=True,
@@ -352,7 +348,7 @@ if predict_clicked:
                 """
                 <div class="advice-box">
                     The model indicates a relatively low probability of pulmonary hypertension at present.<br><br>
-                    <b>Suggested next step:</b> continue routine follow-up and interpret the result together with symptoms, imaging, and other examinations.
+                    <b>Suggested next step:</b> Continue routine follow-up.
                 </div>
                 """,
                 unsafe_allow_html=True,
