@@ -80,8 +80,8 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(180deg, #07111f 0%, #08111b 100%);
-        color: #f3f4f6;
+        background: #ffffff;
+        color: #111827;
     }
 
     .block-container {
@@ -90,21 +90,21 @@ st.markdown(
         max-width: 1400px;
     }
 
-    h1, h2, h3, h4, h5, h6, p, label, div {
+    h1, h2, h3, h4, h5, h6, p, label, div, span {
         color: #111827;
     }
 
     .section-card {
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.08);
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
         border-radius: 18px;
         padding: 18px 20px;
         margin-bottom: 16px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
     }
 
     .result-high {
-        background: #f3f4f6;
+        background: #fff7f7;
         border-left: 5px solid #ff5a67;
         border-radius: 16px;
         padding: 18px 18px 16px 18px;
@@ -113,7 +113,7 @@ st.markdown(
     }
 
     .result-low {
-        background: #f3f4f6;
+        background: #f0fdf4;
         border-left: 5px solid #16a34a;
         border-radius: 16px;
         padding: 18px 18px 16px 18px;
@@ -122,21 +122,23 @@ st.markdown(
     }
 
     .advice-box {
-        background: rgba(163, 230, 53, 0.20);
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
         border-radius: 14px;
         padding: 16px 18px;
-        color: #fefce8;
+        color: #111827;
         line-height: 1.65;
     }
 
     .shap-box {
         background: #ffffff;
+        border: 1px solid #e5e7eb;
         border-radius: 16px;
         padding: 12px;
     }
 
     .small-note {
-        color: #cbd5e1;
+        color: #6b7280;
         font-size: 0.92rem;
     }
 
@@ -144,19 +146,21 @@ st.markdown(
         font-size: 2.6rem;
         font-weight: 800;
         margin-bottom: 0.3rem;
+        color: #111827;
     }
 
     .subtitle-main {
-        color: #cbd5e1;
+        color: #4b5563;
         font-size: 1.02rem;
         margin-bottom: 1.2rem;
     }
 
     div[data-testid="stMetric"] {
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.08);
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
         padding: 12px 14px;
         border-radius: 14px;
+        color: #111827;
     }
 
     .stButton > button {
