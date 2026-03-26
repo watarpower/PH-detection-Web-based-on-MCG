@@ -17,7 +17,7 @@ st.set_page_config(
 # =========================
 # 2. Paths / constants
 # =========================
-MODEL_PATH = "final_model_RF.pkl"   # change if needed
+MODEL_PATH = "RandomForest_best_model.joblib"   # change if needed
 FEATURE_FILE = "selected_features_1SE_建模数据.txt"
 PH_THRESHOLD = 0.352361111
 
