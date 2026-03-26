@@ -220,7 +220,7 @@ except Exception as e:
 # =========================
 st.markdown('<div class="title-main">🩺 Pulmonary Hypertension Risk Calculator Based on MCG</div>', unsafe_allow_html=True)
 st.markdown(
-    '<div class="subtitle-main">Enter the patient MCG features below and click <b>Predict</b> to obtain the diagnostic probability and SHAP explanation.</div>',
+    '<div class="subtitle-main">Enter the patient MCG features below and click <b>Predict</b> to obtain the diagnostic probability and SHAP explanation.',
     unsafe_allow_html=True
 )
 st.markdown("---")
@@ -228,7 +228,7 @@ st.markdown("---")
 # =========================
 # 7. Input section
 # =========================
-st.markdown("## 📋 Patient Parameter Input")
+st.markdown("## 📋 Patient Feature Input")
 st.write("Please enter the input features. Turn on SHAP explanation if you want the waterfall plot.")
 
 show_shap = st.checkbox("Show SHAP explanation (slower)", value=True)
