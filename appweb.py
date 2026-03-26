@@ -365,12 +365,6 @@ if predict_clicked:
                 unsafe_allow_html=True,
             )
 
-        m1, m2 = st.columns(2)
-        with m1:
-            st.metric("Predicted Probability", f"{prob:.4f}")
-        with m2:
-            st.metric("Decision Threshold", f"{PH_THRESHOLD:.6f}")
-
         st.markdown("## 🩺 Decision Support")
         if pred == 1:
             st.markdown(
