@@ -39,10 +39,9 @@ FEATURE_LABELS = {
 # =========================
 st.markdown(
     """
-    <style>
-    .stApp {
-        background: linear-gradient(180deg, #07111f 0%, #08111b 100%);
-        color: #f3f4f6;
+   .stApp {
+    background: #ffffff;
+    color: #111827;
     }
 
     .block-container {
@@ -52,7 +51,7 @@ st.markdown(
     }
 
     h1, h2, h3, h4, h5, h6, p, label, div {
-        color: #f3f4f6;
+        color: #111827;
     }
 
     .section-card {
