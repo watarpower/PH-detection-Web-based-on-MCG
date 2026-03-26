@@ -25,13 +25,13 @@ FEATURE_LABELS = {
     "sex": "Sex (0=female, 1=male)",
     "age": "Age (years)",
     "BMI": "BMI",
-    "R_Mag_Ang": "Angle difference of current vector at R and T peaks",
-    "QRS_TCV_AREA": "Area of QRS total current vector",
-    "QTc": "QTc interval",
-    "P_P_MFD": "P-wave peak distance",
-    "T_Mag_Ang": "Angle at T peak",
-    "R_TCV_Ang": "Angle of current vector at R peak",
-    "P_Mag_Dis": "Distance at P peak",
+    "R_Mag_Ang",
+    "QRS_TCV_AREA",
+    "QTc",
+    "P_P_MFD",
+    "T_Mag_Ang",
+    "R_TCV_Ang",
+    "P_Mag_Dis",
 }
 
 # =========================
