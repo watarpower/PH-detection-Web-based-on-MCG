@@ -39,6 +39,7 @@ FEATURE_LABELS = {
 # =========================
 st.markdown(
     """
+    <style>
     .stApp {
         background: linear-gradient(180deg, #07111f 0%, #08111b 100%);
         color: #f3f4f6;
